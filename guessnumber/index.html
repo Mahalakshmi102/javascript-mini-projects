@@ -1,0 +1,133 @@
+
+
+
+<body>
+    
+
+<center>
+    <div class="container"> 
+    <h1> Guess The Number 1-10</h1>
+    <input id="user" type="number">
+    <button onclick="change()">check</button>
+    <h2 id="rw">hear show right/wrong</h2> 
+
+    </div>
+
+
+</center>
+</body>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+}
+
+.container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 300px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #26c6da;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00acc1;
+}
+
+h2 {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+   /* div{
+        
+        font-family:sans-serif;
+        padding-top: 100px;
+    }
+    #user{
+        height: 50px;
+        width: 150px;
+        display: block;
+        padding: 25px;
+        margin-bottom: 20px;
+        color: black;
+
+        
+    }
+    button{
+        padding: 20px;
+        height: 20px;
+        width:100px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-weight: 700;
+        background-color: aqua;
+        cursor: pointer;
+        border: none;
+        
+    }*/
+   
+</style>
+
+<script>
+    var inputt = document.getElementById("user")
+    var rww = document.getElementById('rw')
+    var randomnumber = Math.floor(Math.random()*10) +1
+    
+
+    function change() {
+        
+        var enterednumber = inputt.value
+        if (randomnumber == enterednumber) {
+            console.log("right")
+            rww.textContent = "you are right"
+            alert("you won the game")
+        }
+        else {
+            console.log("wrong")
+            rww.textContent = "you are wrong"
+        }
+    }
+
+
+</script>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDENT FORM</title>
+  <link rel="stylesheet" href="todoo.css">
+
+</head>
+<center>
+
+  <body>
+    <h1>STUDENT FORM</h1>
+    <form id="one">
+      <table>
+        <tr>
+          
+          <td id="tdd">
+            Name:
+          </td>
+          
+          <td id="tdd"><input id="name" type="text" placeholder="enter your name"  required></td>
+        </tr>
+        <tr>
+          <td id="tdd">
+            Age:
+          </td>
+          <td id="tdd"><input id="age" type="number" placeholder="enter your age"  required></td>
+        </tr>
+        <tr>
+          <td id="tdd">
+            Gender:
+          </td>
+          <td class="gender" id="tdd">
+            <input type="radio" name="gender" value="Male" required>Male
+            <input type="radio" name="gender" value="Female">Female
+
+          </td>
+        </tr>
+        <tr>
+          <td id="tdd">
+            Course:
+          </td>
+          <td id="tdd"> <select id="course" class="two"  required>
+              <option value="">select</option>
+              <option value="javascript">javascript</option>
+              <option value="c">c</option>
+              <option value="c++">c++</option>
+              <option value="python">python</option>
+            </select> </td>
+        </tr>
+        <tr>
+          <td id="tdd">
+            Email
+          </td>
+          <td id="tdd"><input id="email" type="email" placeholder="enter your email"  required></td>
+        </tr>
+
+      </table>
+      <button type="submit" id="sub">Submit</button>
+    </form>
+
+    <table id="otable">
+      <thead>
+        <tr>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>COURSE</th>
+        <th>GENDER</th>
+        <th>EMAIL</th>
+        <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+
+
+    <script>
+     
+      const form = document.getElementById("one");
+      const tableBody = document.querySelector("#otable tbody");
+
+      // When form is submitted
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // stop form reload
+
+        // Get values
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const gender = document.querySelector('input[name="gender"]:checked').value;
+        const course = document.getElementById("course").value;
+        const email = document.getElementById("email").value;
+          
+        if(!name || !age || !gender || !email){
+          alert("please fill all fields!...");
+          return;
+        }
+        
+        const newRow = document.createElement("tr");
+        newRow.id = "trr";
+
+        
+        newRow.innerHTML = `
+        <td>${name}</td>
+        <td>${age}</td>
+        <td>${course}</td>
+        <td>${gender}</td>
+        <td>${email}</td>
+        <td><button class="delete-btn">Delete</button></td>
+      `;
+
+        
+        tableBody.appendChild(newRow);
+
+        
+        form.reset();
+
+        newRow.querySelector(".delete-btn").addEventListener("click", function () {
+          newRow.remove(); // removes that row
+        });
+      });
+    </script>
+  </body>
+
+</html>

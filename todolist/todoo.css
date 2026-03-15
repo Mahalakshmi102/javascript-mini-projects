@@ -1,0 +1,85 @@
+h1 {
+    color: white;
+}
+
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2022/09/13/08/11/study-7451274_1280.jpg");
+}
+
+table,
+#tdd,
+tr,
+form {
+    border: 1px double transparent;
+    border-collapse: collapse;
+    width: fit-content;
+    background-color: transparent;
+    color: white;
+
+
+
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 300px;
+    height: 20px;
+    margin: 1px;
+}
+
+#sub {
+    width: 410px;
+    background-color: bisque;
+    padding: 5px;
+    margin: auto;
+    border: 1px solid black;
+    color: black;
+
+}
+
+#sub:hover {
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.two {
+    width: 260px;
+}
+
+#otable {
+    margin: 0 auto;
+    width: 75%;
+   
+    border-collapse: collapse;
+    margin: 35px;
+
+
+
+}
+
+th,
+td {
+
+    padding: 10px;
+    text-align: center;
+
+    color: white;
+    background-color: transparent;
+
+}
+
+#course {
+    width: 310px;
+    height: 30px;
+}
+
+.delete-btn {
+    background-color: rgb(230, 48, 48);
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: rgb(162, 27, 27);
+    cursor: pointer;
+}

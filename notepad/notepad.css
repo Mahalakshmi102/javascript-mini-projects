@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(65, 30, 65);
+    color: white;
+    padding-top: 4%;
+    padding-left: 10%;
+
+}
+.container h1{
+  font-weight: 600;
+  font-size: 35px;
+  align-items: center;
+ 
+
+}
+.container button{
+    cursor: pointer;
+    background-color:rgb(175, 92, 175);
+    align-items: center;
+    color: white;
+    font-weight: 500;
+    outline: 0;
+    border: 0;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    border-radius: 40px;
+    font-size: 16px;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 5px;
+
+ }
+ .notes-container img{
+    position: absolute;
+    width: 25px;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+
